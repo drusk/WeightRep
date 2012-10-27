@@ -1,0 +1,108 @@
+<html manifest="manifest.php">
+  <head>
+    <title>WeightRep</title>
+    <link type="text/css" rel="stylesheet" media="screen" href="lib/jqtouch/jqtouch.css">
+    <link type="text/css" rel="stylesheet" media="screen" href="lib/themes/jqt/theme.css">
+    <link type="text/css" rel="stylesheet" media="screen" href="weightrep.css">
+    <script type="text/javascript" src="lib/jqtouch/jquery.js"></script>
+    <script type="text/javascript" src="lib/jqtouch/jqtouch.js"></script>
+    <script type="text/javascript" src="weightrep.js"></script>
+  </head>
+  <body>
+    <div id="home">
+      <div class="toolbar">
+	<h1>WeightRep</h1>
+      </div>
+      <ul class="rounded">
+	<li class="arrow"><a href="#onerep">Find one rep max</a></li>
+	<li class="arrow"><a href="#recommendWeight">Recommend weight</a></li>
+	<li class="arrow"><a href="#recommendReps">Recommend repetitions</a></li>
+      </ul>
+      <div class="instr">
+	<p class="instr">Note that these calculations work for any units (lb, kg) so the units do not need to be entered.</p>
+      </div>
+    </div>
+    <div id="onerep">
+      <div class="toolbar">
+	<h1>One Rep Max</h1>
+	<a class="button back" href="#">Back</a>
+      </div>
+      <div class="instr">
+	<p>Calculate your one rep max!</p>
+      </div>
+      <form method="post">
+	<ul>
+	  <li><input type="text" placeholder="Weight" name="weight" 
+		     id="weight" autocapitalize="off" autocorrect="off" 
+		     autocomplete="off" /></li>
+	  <li><input type="text" placeholder="Repetitions" name="reps" 
+		     id="reps" autocapitalize="off" autocorrect="off"
+		     autocomplete="off" /></li>
+	  <li><input type="submit" class="submit" name="action" 
+		     value="Calculate One Rep Max" /></li>
+	</ul>
+      </form>
+      <div>
+	<p id="oneRepResult" class="result"></p>
+      </div>
+    </div>
+    <div id="recommendWeight">
+      <div class="toolbar">
+	<h1>Weight?</h1>
+	<a class="button back" href="#">Back</a>
+      </div>
+      <div class="instr">
+	<p>Find out how much weight you should lift for a desired number of repetitions.</p>
+	<p>In order to calculate this, you will also need to enter a weight and number of repetitions that you can typically do.</p>
+      </div>
+      <form method="post">
+	<ul>
+	  <li><input type="text" placeholder="Desired reps" name="desiredReps" 
+		     id="desiredReps" autocapitalize="off" autocorrect="off" 
+		     autocomplete="off" /></li>
+	  <li><input type="text" placeholder="Known weight" name="knownWeight" 
+		     id="rw_knownWeight" autocapitalize="off" autocorrect="off"
+		     autocomplete="off" /></li>
+	  <li><input type="text" placeholder="Known reps" name="knownReps" 
+		     id="rw_knownReps" autocapitalize="off" autocorrect="off"
+		     autocomplete="off" /></li>
+	  <li><input type="submit" class="submit" name="action" 
+		     value="Recommend a weight" /></li>
+	</ul>
+      </form>
+      <div>
+	<p id="recommendWeightResult" class="result"></p>
+      </div>
+    </div>
+    <div id="recommendReps">
+      <div class="toolbar">
+	<h1>Reps?</h1>
+	<a class="button back" href="#">Back</a>
+      </div>
+      <div class="instr">
+	<p>Find out how many repetitions you should do for a desired weight.</p>
+	<p>In order to calculate this, you will also need to enter a weight and number of repetitions that you can typically do.</p>
+      </div>
+      <form method="post">
+	<ul>
+	  <li><input type="text" placeholder="Desired weight" 
+		     name="desiredWeight" 
+		     id="desiredWeight" autocapitalize="off" autocorrect="off" 
+		     autocomplete="off" /></li>
+	  <li><input type="text" placeholder="Known weight" name="knownWeight" 
+		     id="rr_knownWeight" autocapitalize="off" autocorrect="off"
+		     autocomplete="off" /></li>
+	  <li><input type="text" placeholder="Known reps" name="knownReps" 
+		     id="rr_knownReps" autocapitalize="off" autocorrect="off"
+		     autocomplete="off" /></li>
+	  <li><input type="submit" class="submit" name="action" 
+		     value="Recommend number of repetitions" /></li>
+	</ul>
+      </form>
+      <div>
+	<p id="recommendRepsResult" class="result"></p>
+      </div>
+    </div>
+  </body>
+</html>
+
