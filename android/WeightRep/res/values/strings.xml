@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WeightRep</string>
+    
+    <string name="one_rep_max_task_name">Find one rep max</string>
+    <string name="recommend_weight_task_name">Recommend weight</string>
+    <string name="recommend_reps_task_name">Recommend repetitions</string>
+    
+    <string name="units_note">Note that these calculations work for any units (lb, kg) so the units do not need to be entered.</string>
+    
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>
